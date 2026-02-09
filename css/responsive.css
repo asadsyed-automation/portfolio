@@ -1,0 +1,725 @@
+/* ========================================
+   MOBILE-FIRST RESPONSIVE DESIGN
+   Production-Ready for All Devices
+   ======================================== */
+
+/* ===================================
+   BASE (Mobile First - 320px+)
+   These styles apply to all screens
+   =================================== */
+
+/* Already defined in main CSS - mobile base */
+
+/* ===================================
+   SMALL MOBILE IMPROVEMENTS (320px - 480px)
+   =================================== */
+
+@media (max-width: 480px) {
+
+    /* Typography adjustments */
+    :root {
+        --fs-h1: 1.875rem;
+        /* 30px */
+        --fs-h2: 1.5rem;
+        /* 24px */
+        --fs-h3: 1.25rem;
+        /* 20px */
+        --fs-h4: 1.125rem;
+        /* 18px */
+        --fs-body: 0.9375rem;
+        /* 15px */
+        --spacing-md: 1rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 3rem;
+    }
+
+    /* Container padding */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Navbar */
+    .logo a {
+        font-size: 1.25rem;
+    }
+
+    .nav-cta {
+        display: none;
+        /* Hide CTA in mobile nav */
+    }
+
+
+    /* Hero Section */
+    .hero {
+        padding: 3rem 0 2rem;
+    }
+
+    .hero-greeting {
+        font-size: 1.125rem;
+    }
+
+    .hero-name {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        flex-direction: column;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    .stat-number {
+        font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.8125rem;
+    }
+
+    .image-placeholder {
+        width: 200px;
+        height: 200px;
+    }
+
+    .image-placeholder i {
+        font-size: 4rem;
+    }
+
+    /* Page Header (Hero for other pages) */
+    .page-header {
+        padding: 4rem 0 2rem;
+    }
+
+    .page-title {
+        font-size: 1.875rem;
+        line-height: 1.2;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    /* Trust Bar */
+    .trust-items {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .trust-item {
+        font-size: 0.9375rem;
+    }
+
+    /* Section Spacing */
+    .section {
+        padding: 2rem 0;
+    }
+
+    .section-label {
+        font-size: 0.6875rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.9375rem;
+    }
+
+    .btn-large {
+        padding: 1rem 1.75rem;
+        font-size: 1rem;
+    }
+
+    /* Profile Card */
+    .profile-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    /* Hide About image on very small screens to avoid duplication */
+    .about-image {
+        display: none;
+    }
+
+    .profile-card i {
+        font-size: 6rem;
+    }
+
+    /* Service Cards */
+    .services-grid {
+        gap: 1.5rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service-icon i {
+        font-size: 1.75rem;
+    }
+
+    /* Portfolio Grid */
+    .portfolio-grid {
+        gap: 1.5rem;
+    }
+
+    .portfolio-image {
+        height: 180px;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+        gap: 1.5rem;
+    }
+
+    /* CTA Section */
+    .cta-title {
+        font-size: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .cta-text {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 2rem 0 1rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .footer-column:first-child,
+    .footer-column:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer-column {
+        padding-bottom: 0;
+        border: none;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-heading {
+        font-size: 1.125rem;
+        margin-bottom: 0.75rem;
+        color: var(--color-white);
+    }
+
+    /* Scroll to Top */
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* ===================================
+   MOBILE (481px - 768px)
+   =================================== */
+
+@media (min-width: 481px) and (max-width: 768px) {
+    :root {
+        --fs-h1: 2.25rem;
+        /* 36px */
+        --fs-h2: 1.875rem;
+        /* 30px */
+        --fs-h3: 1.5rem;
+        /* 24px */
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+
+    /* Hero */
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .image-placeholder {
+        width: 280px;
+        height: 280px;
+    }
+
+    /* Hide About image on mobile to avoid duplication */
+    .about-image {
+        display: none;
+    }
+
+    /* Buttons */
+    .btn {
+        width: auto;
+        min-width: 200px;
+    }
+
+    /* Hero CTA can be side-by-side if space allows */
+    .hero-cta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Stats */
+    .hero-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* ===================================
+   TABLET (769px - 1024px)
+   =================================== */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+    :root {
+        --fs-h1: 2.75rem;
+        /* 44px */
+        --fs-h2: 2.25rem;
+        /* 36px */
+        --fs-h3: 1.75rem;
+        /* 28px */
+    }
+
+    /* Hero Content - Single column but centered */
+    .hero-content {
+        flex-direction: column-reverse;
+        /* Keep image on top */
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-text {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .hero-cta {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .image-placeholder {
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+    }
+
+    /* Section Grid */
+    .section-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    /* Services - 2 columns */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Portfolio - 2 columns */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Testimonials - 2 columns */
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer - 2 columns */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ===================================
+   LAPTOP/SMALL DESKTOP (1025px - 1279px)
+   =================================== */
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .container {
+        max-width: 1000px;
+    }
+
+    /* Hero Section - Fix layout for laptop */
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        grid-template-columns: none !important;
+    }
+
+    .hero-stats {
+        flex-direction: row !important;
+        gap: 2.5rem !important;
+        justify-content: center !important;
+    }
+
+    .hero-cta {
+        justify-content: center !important;
+        display: flex !important;
+    }
+
+    .hero-subtitle {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        max-width: 650px !important;
+    }
+
+    .hero-text {
+        width: 100% !important;
+        max-width: 800px !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+    }
+
+    .hero-greeting {
+        text-align: center !important;
+    }
+
+    .hero-name {
+        text-align: center !important;
+    }
+
+    .hero-image {
+        display: none !important;
+    }
+
+    /* Services - 3 columns on laptop */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Portfolio - 3 columns */
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Testimonials - 3 columns */
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===================================
+   LARGE DESKTOP (1280px+)
+   =================================== */
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    /* Hero returns to single column centered */
+    .hero-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        grid-template-columns: none !important;
+    }
+
+    .hero-stats {
+        flex-direction: row !important;
+        gap: 3rem !important;
+        justify-content: center !important;
+    }
+
+    .hero-cta {
+        justify-content: center !important;
+        display: flex !important;
+    }
+
+    .hero-subtitle {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        max-width: 700px !important;
+    }
+
+    .hero-text {
+        width: 100% !important;
+        max-width: 900px !important;
+        padding-right: 0 !important;
+        text-align: center !important;
+    }
+
+    .hero-greeting {
+        text-align: center !important;
+    }
+
+    .hero-name {
+        text-align: center !important;
+    }
+
+    .hero-image {
+        display: none !important;
+    }
+
+    /* Full grid layouts */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Blog Layout - 2 Column with Sidebar */
+    .blog-layout {
+        grid-template-columns: 2fr 1fr;
+        gap: 3rem;
+    }
+
+    .blog-sidebar {
+        display: block;
+    }
+
+    .blog-posts-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    }
+}
+
+/* ===================================
+   MOBILE NAVIGATION (All Mobile Sizes)
+   =================================== */
+
+@media (max-width: 1024px) {
+
+    /* Hide desktop menu, show hamburger */
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--color-primary);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2rem;
+        gap: 0;
+        transition: left 0.3s ease;
+        box-shadow: var(--shadow-lg);
+        overflow-y: auto;
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-menu li:last-child {
+        border-bottom: none;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.125rem;
+        color: var(--color-white);
+    }
+
+    .nav-menu a::after {
+        display: none;
+        /* Remove underline animation on mobile */
+    }
+
+    .nav-cta {
+        display: none;
+        /* Hide button on mobile/tablet to prevent layout break */
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+}
+
+/* ===================================
+   UTILITIES FOR RESPONSIVE
+   =================================== */
+
+/* Hide on mobile */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Hide on desktop */
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive iframes (videos) */
+iframe {
+    max-width: 100%;
+}
+
+/* Prevent horizontal scroll */
+html,
+body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Touch-friendly tap targets (min 44x44px) */
+@media (max-width: 768px) {
+
+    button,
+    .btn,
+    a.btn,
+    input[type="submit"],
+    input[type="button"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Improve readability on small screens */
+@media (max-width: 768px) {
+
+    p,
+    li {
+        line-height: 1.7;
+    }
+
+    /* Reduce letter spacing on narrow screens */
+    .section-label {
+        letter-spacing: 1px;
+    }
+}
+
+/* Better table scrolling on mobile */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+
+    /* Hide navigation and interactive elements */
+    .navbar,
+    .hamburger,
+    .scroll-to-top,
+    .cta-section,
+    .nav-cta {
+        display: none !important;
+    }
+
+    /* Adjust for print */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+
+    /* Show URLs after links */
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+    }
+}
